@@ -16,10 +16,13 @@ function Portfolio() {
   };
 
   return (
-    <div className={eyeKiller ? "pain-mode" : "dark-mode"}>
-      <div className="container">
-        <Header handleModeChange={handleModeChange} setMode={eyeKiller} />
-        <Opdrachten />
+    <div>
+      <div className={eyeKiller ? "pain-mode-bg" : "dark-mode-bg"} />
+      <div className={eyeKiller ? "pain-mode" : "dark-mode"}>
+        <div className="container">
+          <Header handleModeChange={handleModeChange} setMode={eyeKiller} />
+          <Opdrachten />
+        </div>
       </div>
     </div>
   );
