@@ -16,7 +16,7 @@ export default function Header({
         <ul>
           <li>
             <a
-              href="./"
+              href="/"
               className="link-decoration"
               style={{
                 color: setMode
@@ -35,7 +35,7 @@ export default function Header({
           </li>
           <li>
             <a
-              href="../portfolio"
+              href="/portfolio"
               className="link-decoration"
               style={{
                 color: setMode
@@ -82,7 +82,7 @@ export default function Header({
           </li>
           <li>
             <a
-              href="./contact"
+              href="/contact"
               className="link-decoration"
               style={{
                 color: setMode
