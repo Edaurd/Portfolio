@@ -1,13 +1,10 @@
 import "../../global.css";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
-import Opdracht from "../../components/opdracht/opdracht";
-import "./App.css";
+import ContactUs from "../../components/Contact/Contact";
 
-const Voorbeeld = () => {
-  const params = useParams();
+function Contact() {
   const [eyeKiller, setEyeKiller] = useState(
     (window as any).Theme ? false : true
   );
@@ -18,28 +15,20 @@ const Voorbeeld = () => {
     body.style.backgroundColor = (window as any).Theme ? "#0d1117" : "#c8d9ed";
   };
 
-  const handleClick = () => {
-    window.history.back();
-  };
   return (
     <div>
       <div className={eyeKiller ? "pain-mode-bg" : "dark-mode-bg"} />
       <div className={eyeKiller ? "pain-mode" : "dark-mode"}>
         <div className="container">
           <Header handleModeChange={handleModeChange} setMode={eyeKiller} />
-          <button className="back-button" onClick={handleClick}>
-            <span role="img" aria-label="back">
-              🔙
-            </span>{" "}
-            Terug
-          </button>
-          <div className="opdracht">
-            <Opdracht code={params.id} />
+          <div className="about">
+            <h2>Voor vragen/opmerkingen ben ik hier bereikbaar</h2>
           </div>
+          <ContactUs />
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default Voorbeeld;
+export default Contact;

@@ -24,43 +24,43 @@ const Opdrachten: React.FC = () => {
     <>
       <div className="grid">
         <Tegel
-          name="Labo 5 Oef 2"
-          description="Pokemon, Gotto Catch Em All"
+          name="Pokemon"
+          description="A wild Laboefening appeared"
           link="portfolio/voorbeeld-1"
         />
         <Tegel
-          name="Labo 4 Oef 5"
+          name="Counter list"
           description="1, 2, 3... allegeluk telt de computer ook"
           link="portfolio/voorbeeld-2"
         />
         <Tegel
-          name="Labo 4 Oef 2"
+          name="Kleuren Selectie"
           description="Rood, Groen, Geel en alle andere kleuren"
           link="portfolio/voorbeeld-3"
         />
         <Tegel
-          name="Tegel 4"
-          description="Description for Tegel 4"
+          name="Filtering en sorting"
+          description="And they said flash was fast"
           link="portfolio/voorbeeld-4"
         />
         <Tegel
-          name="Tegel 5"
-          description="Description for Tegel 5"
+          name="Tic Tac Toe"
+          description="eerst de hoeken nemen om altijd te winnen"
           link="portfolio/voorbeeld-5"
         />
         <Tegel
-          name="Labo 5 Oef 1"
-          description="Een simpele timer met wat extra randomness"
+          name="Interval"
+          description="tick tock tick tock geen tiktok"
           link="portfolio/voorbeeld-6"
         />
         <Tegel
-          name="Tegel 7"
-          description="Description for Tegel 7"
+          name="LocalStorage"
+          description="Hi LocalStorage, I'm Dad"
           link="portfolio/voorbeeld-7"
         />
         <Tegel
-          name="Tegel 8"
-          description="Description for Tegel 8"
+          name="Slots"
+          description="Online gokken met geld is verboden in belgie"
           link="portfolio/voorbeeld-8"
         />
       </div>

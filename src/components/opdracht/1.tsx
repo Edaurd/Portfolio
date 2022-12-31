@@ -34,7 +34,7 @@ const Pokedex = ({ limit, results }: PokedexProps) => {
       <input type="text" onChange={(event) => setSearch(event.target.value)} />
       {pokemon &&
         pokemon.results
-          .filter((pokemon) => pokemon.name.startsWith(search))
+          .filter((pokemon) => pokemon.name.includes(search))
           .map((pokemon) => <p>{pokemon.name}</p>)}
       <div>
         <input

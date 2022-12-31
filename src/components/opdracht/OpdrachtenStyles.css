@@ -1,0 +1,89 @@
+.studenten {
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 300px;
+}
+Table {
+  min-width: 500px;
+}
+Table th {
+  width: 100px;
+  height: 50px;
+  color: #fff;
+  background-color: grey;
+}
+Table td {
+  text-align: center;
+}
+
+Table,
+Table th,
+Table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: white;
+  color: black;
+}
+
+.cell-holder {
+  display: flex;
+  flex-wrap: wrap;
+  width: 306px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cell:nth-child(3n + 4) {
+  clear: left;
+}
+
+.slotContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slotContainer p {
+  text-align: center;
+}
+.slots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+.slots button,
+.slots img {
+  border-radius: 10px;
+}
+.slots img {
+  border: 2px solid black;
+}
+.slots button,
+.slots img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 10px;
+}
+.slots button:hover {
+  cursor: pointer;
+}

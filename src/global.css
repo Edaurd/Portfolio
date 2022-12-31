@@ -37,14 +37,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--white-smoke-colorcolor);
-  background-color: var(--black-color-bg);
 }
 
 .dark-mode {
   transition: 150ms;
   background-color: #0d1117;
 }
-
+.randomEGERW {
+  margin: 20px;
+}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -54,22 +55,32 @@ body {
   color: var(--white-smoke-colorcolor);
 }
 
-.dark-mode {
+.dark-mode,
+.dark-mode-bg {
   transition: 150ms;
   background-color: var(--black-color-bg);
-  height: 100%;
 }
 
-.pain-mode {
+.pain-mode,
+.pain-mode-bg {
   transition: 150ms;
   background-color: var(--white-color-bg);
-  height: 100%;
+}
+.dark-mode-bg,
+.pain-mode-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200vh;
+  height: 200vh;
+  z-index: -1;
 }
 
 .pain-mode .header-title {
   background: var(--white-gradient-color);
   background-size: 100%;
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;

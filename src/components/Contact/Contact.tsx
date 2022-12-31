@@ -1,9 +1,60 @@
-import React, { useState } from "react";
-import emailjs, { init } from "emailjs-com";
+import React, { useRef, useState } from "react";
+import * as emailjs from "@emailjs/browser";
+import "./Contact.css";
 
-// Replace with your EmailJS account's sender email, template ID, and user ID
-const SENDER_EMAIL = "your-email@example.com";
-const TEMPLATE_ID = "template_0jxieew";
-const USER_ID = "yaXBT1fCWtR1RiCSu";
+export const ContactUs: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
-init("yaXBT1fCWtR1RiCSu", "7fkMM_4DKDWTVRhO4DmmU"); // Initialize EmailJS with your API key
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    emailjs
+      .sendForm(
+        "service_0gaq0hd",
+        "template_0jxieew",
+        form.current ? form.current : "nothing",
+        "yaXBT1fCWtR1RiCSu"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result);
+          setShowConfirmation(true);
+          setIsSending(false);
+        },
+        (error) => {
+          console.log(error.text);
+          setIsSending(false);
+        }
+      );
+  };
+
+  if (showConfirmation) {
+    return <p>Your message was sent successfully!</p>;
+  } else {
+    return (
+      <>
+        {isSending ? (
+          <p>Sending your message...</p>
+        ) : (
+          <form ref={form} onSubmit={sendEmail}>
+            <label>Name</label>
+            <input type="text" name="user_name" />
+            <br />
+            <label>Email</label>
+            <input type="email" name="user_email" />
+            <br />
+            <label>Message</label>
+            <textarea name="message" />
+            <br />
+            <input type="submit" value="Send" />
+          </form>
+        )}
+      </>
+    );
+  }
+};
+
+export default ContactUs;

@@ -16,6 +16,25 @@ export default function Header({
         <ul>
           <li>
             <a
+              href="./"
+              className="link-decoration"
+              style={{
+                color: setMode
+                  ? "var(--light-text-color)"
+                  : "var(--dark-text-color)",
+              }}
+            >
+              Home
+              <span className="icon-change">
+                <React.Fragment>
+                  <span aria-label="Thinking Face">🏘️</span>
+                  <span aria-label="Person">🏠</span>
+                </React.Fragment>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
               href="../portfolio"
               className="link-decoration"
               style={{
@@ -63,7 +82,7 @@ export default function Header({
           </li>
           <li>
             <a
-              href="./"
+              href="./contact"
               className="link-decoration"
               style={{
                 color: setMode
@@ -71,11 +90,11 @@ export default function Header({
                   : "var(--dark-text-color)",
               }}
             >
-              Home
+              Contact
               <span className="icon-change">
                 <React.Fragment>
-                  <span aria-label="Thinking Face">🤔</span>
-                  <span aria-label="Person">👤</span>
+                  <span aria-label="Thinking Face">💬</span>
+                  <span aria-label="Person">📩</span>
                 </React.Fragment>
               </span>
             </a>

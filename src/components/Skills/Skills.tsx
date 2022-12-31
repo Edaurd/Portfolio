@@ -1,6 +1,5 @@
 import "./Skills.css";
 import styled from "styled-components";
-import { useState } from "react";
 
 interface Skill {
   name: string;

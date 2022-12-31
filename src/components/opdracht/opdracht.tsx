@@ -1,7 +1,12 @@
 import Een from "./1";
 import Twee from "./2";
 import Drie from "./3";
+import Vier from "./4";
+import Vijf from "./5";
 import Zes from "./6";
+import Zeven from "./7";
+import Acht from "./8";
+
 type OpdrachtProperty = {
   code: any;
 };
@@ -15,13 +20,15 @@ const Opdracht = ({ code }: OpdrachtProperty) => {
   } else if (num === 3) {
     return <Drie />;
   } else if (num === 4) {
-    return <Drie />;
+    return <Vier />;
   } else if (num === 5) {
-    return <Zes />;
+    return <Vijf />;
   } else if (num === 6) {
     return <Zes />;
+  } else if (num === 7) {
+    return <Zeven />;
   } else if (num === 8) {
-    return <Zes />;
+    return <Acht />;
   } else {
     return <>Opdracht Niet Gevonden</>;
   }
