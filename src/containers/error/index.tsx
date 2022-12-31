@@ -2,17 +2,15 @@ import "../../global.css";
 import { useState } from "react";
 
 import Header from "../../components/Header/Header";
-import ContactUs from "../../components/Contact/Contact";
 
 function Error() {
-  const [eyeKiller, setEyeKiller] = useState(
-    (window as any).Theme ? false : true
-  );
+  const [eyeKiller, setEyeKiller] = useState(false);
 
+  const body = document.getElementsByTagName("body")[0];
+  body.style.backgroundColor = !eyeKiller ? "#0d1117" : "#c8d9ed";
   const handleModeChange = () => {
-    const body = document.getElementsByTagName("body")[0];
     setEyeKiller(!eyeKiller);
-    body.style.backgroundColor = (window as any).Theme ? "#0d1117" : "#c8d9ed";
+    body.style.backgroundColor = eyeKiller ? "#0d1117" : "#c8d9ed";
   };
 
   return (

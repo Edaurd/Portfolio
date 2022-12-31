@@ -53,16 +53,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--white-smoke-colorcolor);
+  transition: 150ms;
 }
 
-.dark-mode,
-.dark-mode-bg {
+.dark-mode {
   transition: 150ms;
   background-color: var(--black-color-bg);
 }
 
-.pain-mode,
-.pain-mode-bg {
+.pain-mode {
   transition: 150ms;
   background-color: var(--white-color-bg);
 }
