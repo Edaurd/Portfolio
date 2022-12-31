@@ -1,0 +1,12 @@
+.skills {
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+.skill-container {
+  text-align: center;
+  color: var(--white-smoke-color);
+}

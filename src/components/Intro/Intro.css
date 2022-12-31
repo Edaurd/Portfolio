@@ -1,0 +1,75 @@
+.container-about {
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--white-smoke-color);
+}
+
+.about {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  max-width: auto;
+}
+
+.about img {
+  border-radius: 100%;
+  width: 100%;
+  max-width: 180px;
+  margin: 0 2.5rem;
+  height: auto;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+  margin-left: 1.1rem;
+}
+
+.about-see {
+  border-bottom: 1px solid #acb4fe;
+  padding-bottom: 2px;
+  max-width: fit-content;
+}
+
+.dark-mode .toptitle {
+  font-size: 5.5rem;
+  font-family: "Lil Johnny", sans-serif;
+  background: var(--gradient-color);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.pain-mode .toptitle {
+  font-size: 5.5rem;
+  font-family: "Lil Johnny", sans-serif;
+  background: var(--white-gradient-color);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.boxed {
+  border-radius: 10px;
+  padding: 1.5rem 3rem;
+  margin-bottom: 20px;
+  position: relative;
+  left: -50%;
+  right: -50%;
+  width: 170%;
+  text-align: center;
+}
+.dark-mode .boxed {
+  background-color: var(--gray-color);
+  color: var(--white-color);
+}
+.pain-mode .boxed {
+  background-color: var(--white-color-smoke-bg);
+  color: var(--gray-color);
+}

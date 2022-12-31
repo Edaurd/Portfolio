@@ -1,0 +1,48 @@
+.opdracht {
+  border-radius: 10px;
+  padding: 1.5rem 3rem;
+  margin-bottom: 20px;
+  position: relative;
+  left: -50%;
+  right: -50%;
+  width: 170%;
+  text-align: center;
+}
+
+.dark-mode .opdracht {
+  color: #e5e5e5;
+}
+
+.pain-mode .opdracht {
+  color: #212121;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+}
+
+.dark-mode .back-button {
+  color: #e5e5e5;
+}
+
+.back-button__icon {
+  fill: #333;
+  margin-right: 8px;
+}
+
+.back-button:hover,
+.back-button:focus {
+  color: #0070f3;
+}
+
+.back-button:hover .back-button__icon,
+.back-button:focus .back-button__icon {
+  fill: #0070f3;
+}
